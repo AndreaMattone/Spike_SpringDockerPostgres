@@ -1,2 +1,12 @@
 # Spike_SpringDockerPostgres
-Spike Spring Boot + Docker with PostgresDB (in Docker)
+
+## Getting Started
+
+Create a Spring project with Spring Initializr (https://start.spring.io/)
+* Project: Maven Project
+* Language: Java
+* Dependencies: Spring Web, Spring Data JPA, PostgreSQL Driver
+
+
+
+
