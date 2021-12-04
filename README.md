@@ -23,6 +23,15 @@ spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
 spring.jpa.hibernate.ddl-auto = create
 
+NB
+EDIT THE README TO SEE THE CODE
+
+
+
+
+
+
+
 * Add the docker plugin in pom.xml
 
     <plugin>
@@ -90,7 +99,7 @@ spring.jpa.hibernate.ddl-auto = create
 * In the root directory open a Windows Powershell and run 
 
 ```sh
- ./mvnw - DskipTests=true clean package
+ ./mvnw -DskipTests=true clean package
 ```
 
 * Build the project with Intellij
