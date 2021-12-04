@@ -2,6 +2,7 @@
 
 ## Getting Started
 
+Install docker windows https://docs.docker.com/desktop/windows/install/
 Create a Spring project with Spring Initializr (https://start.spring.io/)
 * Project: Maven Project
 * Language: Java
