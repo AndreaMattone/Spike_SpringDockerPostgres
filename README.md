@@ -9,7 +9,7 @@ Create a Spring project with Spring Initializr (https://start.spring.io/)
 * Dependencies: Spring Web, Spring Data JPA, PostgreSQL Driver
 
 
-## Write Java classes ...
+## Write Java classes like the example in this repo (there are more branch look in all to find the directory)
 
 ## Docker
 
@@ -26,7 +26,6 @@ spring.jpa.hibernate.ddl-auto = create
 ```
 NB
 EDIT THE README TO SEE THE CODE
-FILE ARE IN THE SECOND BRANCH
 
 
 
