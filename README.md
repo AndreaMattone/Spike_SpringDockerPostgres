@@ -24,13 +24,6 @@ spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
 spring.jpa.hibernate.ddl-auto = create
 ```
-NB
-EDIT THE README TO SEE THE CODE
-
-
-
-
-
 
 * Add the docker plugin in pom.xml
 ```sh
