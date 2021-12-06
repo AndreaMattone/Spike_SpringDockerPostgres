@@ -14,7 +14,7 @@ Create a Spring project with Spring Initializr (https://start.spring.io/)
 ## Docker
 
 * Modify application.properties
-
+```sh
 spring.datasource.url=jdbc:postgresql://dbpostgresql:5432/testdb
 spring.datasource.driver-class-name=org.postgresql.Driver
 spring.datasource.username=admin
@@ -23,7 +23,7 @@ spring.jpa.show-sql=true
 spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults = false
 spring.jpa.database-platform=org.hibernate.dialect.PostgreSQL9Dialect
 spring.jpa.hibernate.ddl-auto = create
-
+```
 NB
 EDIT THE README TO SEE THE CODE
 FILE ARE IN THE SECOND BRANCH
@@ -34,7 +34,7 @@ FILE ARE IN THE SECOND BRANCH
 
 
 * Add the docker plugin in pom.xml
-
+```sh
     <plugin>
 				<groupId>io.fabric8</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
@@ -64,8 +64,9 @@ FILE ARE IN THE SECOND BRANCH
 					</execution>
 				</executions>
 			</plugin>
-      
+```  
  * In the root directory add the "Dockerfile"
+  ```sh
   FROM openjdk:13-alpine
   RUN addgroup -S spring && adduser -S spring -G spring
   #VOLUME /tmp
@@ -73,9 +74,11 @@ FILE ARE IN THE SECOND BRANCH
   ARG DEPENDENCY=target
   ADD ${DEPENDENCY}/*.jar appbootrest.jar
   ENTRYPOINT ["java","-jar","/appbootrest.jar"]
+  ```
 
 * In the root directory add the "docker-compose.yml" (match the db name with the application.properties)
-  version: '3'
+```sh
+version: '3'
 
   services:
     dbpostgresql:
@@ -95,7 +98,7 @@ FILE ARE IN THE SECOND BRANCH
         - "8080:8080"
       depends_on:
         - dbpostgresql
-
+```
 
 * In the root directory open a Windows Powershell and run 
 
